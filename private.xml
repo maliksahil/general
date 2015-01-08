@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>RDP</appname>
+    <equal>com.microsoft.rdc.mac</equal>
+    <equal>com.teamviewer.TeamViewer</equal>
+  </appdef>
+  <appdef>
+    <appname>CHROME</appname>
+    <equal>com.google.Chrome</equal>
+  </appdef>
+    <appdef>
+        <appname>Safari</appname>
+        <equal>com.apple.Safari</equal>
+    </appdef>
+  <appdef>
+    <appname>VMWARE</appname>
+    <equal>com.vmware.fusion</equal>
+  </appdef>
+<item>
+    <name>RDP Specific Settings</name>
+    <identifier>private.appdef</identifier>
+    <only>RDP</only>
+    <block>
+	<autogen>--KeyToKey-- KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+	<autogen>--KeyToKey-- KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    </block>
+</item>
+<item>
+    <name>CTRL CMD Swap</name>
+    <identifier>private.appdef2</identifier>
+    <not>RDP</not>
+    <not>VMWARE</not>
+    <block>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::C, ModifierFlag::CONTROL_L,
+		KeyCode::C, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::V, ModifierFlag::CONTROL_L,
+		KeyCode::V, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::X, ModifierFlag::CONTROL_L,
+		KeyCode::X, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::Z, ModifierFlag::CONTROL_L,
+		KeyCode::Z, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::Y, ModifierFlag::CONTROL_L,
+		KeyCode::Z, ModifierFlag::COMMAND_L || ModifierFlag::SHIFT_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::S, ModifierFlag::CONTROL_L,
+		KeyCode::S, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::T, ModifierFlag::CONTROL_L,
+		KeyCode::T, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::F, ModifierFlag::CONTROL_L,
+		KeyCode::F, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::A, ModifierFlag::CONTROL_L,
+		KeyCode::A, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::N, ModifierFlag::CONTROL_L,
+		KeyCode::N, ModifierFlag::COMMAND_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::O, ModifierFlag::CONTROL_L,
+		KeyCode::O, ModifierFlag::COMMAND_L
+        </autogen>
+    </block>
+</item>
+<item>
+    <name>Chrome address bar</name>
+    <identifier>private.appdef3</identifier>
+    <only>CHROME</only>
+    <block>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::D, ModifierFlag::COMMAND_L,
+		KeyCode::L, ModifierFlag::COMMAND_L
+        </autogen>
+    </block>
+</item>
+<item>
+    <name>Safari address bar</name>
+    <identifier>private.appdef4</identifier>
+    <only>Safari</only>
+    <block>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::D, ModifierFlag::COMMAND_L,
+		KeyCode::L, ModifierFlag::COMMAND_L
+        </autogen>
+    </block>
+</item>    
+<item>
+    <name>ALT_F4</name>
+    <identifier>private.appdef5</identifier>
+    <not>VMWARE</not>
+    <block>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::F4, ModifierFlag::COMMAND_L,
+		KeyCode::Q, ModifierFlag::COMMAND_L
+        </autogen>
+    </block>
+</item>
+<item>
+    <name>CTRL_ARROWS For editing</name>
+    <identifier>private.appdef6</identifier>
+    <not>RDP</not>
+    <not>VMWARE</not>
+    <block>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L,
+		KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+	<autogen>
+		--KeyToKey-- 
+		KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L,
+		KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
+        </autogen>
+        <autogen>__KeyToKey__ FROMKEYCODE_HOME, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::CURSOR_UP,    ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ FROMKEYCODE_HOME, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_UP,    ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ FROMKEYCODE_END,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::CURSOR_DOWN,  ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ FROMKEYCODE_END,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::CURSOR_DOWN,  ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ FROMKEYCODE_HOME, KeyCode::CURSOR_LEFT,  ModifierFlag::COMMAND_L</autogen>
+        <autogen>__KeyToKey__ FROMKEYCODE_END, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+    </block>
+</item>
+</root>
