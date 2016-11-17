@@ -3,6 +3,7 @@
   <appdef>
     <appname>RDP</appname>
     <equal>com.microsoft.rdc.mac</equal>
+    <equal>com.microsoft.rdc.osx.beta</equal>
     <equal>com.teamviewer.TeamViewer</equal>
   </appdef>
   <appdef>
